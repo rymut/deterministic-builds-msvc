@@ -5,3 +5,5 @@ target_link_libraries(main_injector detours::detours)
 
 add_library(main_hook SHARED "main_hook.cpp" "main_hook.def")
 target_link_libraries(main_hook detours::detours)
+
+add_executable(process_injector process_injector.cpp)

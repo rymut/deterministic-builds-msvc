@@ -27,10 +27,11 @@ BOOL APIENTRY DllMain(HMODULE hModule, DWORD  ul_reason_for_call, LPVOID lpReser
 	}
 	switch (ul_reason_for_call) {
 	case DLL_PROCESS_ATTACH: {
-		std::wcout << "module path: " << module_path(hModule) << std::endl;
+		std::wcout << "attach path: " << module_path(hModule) << std::endl;
 		break;
 	}
 	case DLL_PROCESS_DETACH: {
+		std::wcout << "datach module" << module_path(hModule) << std::endl; 
 		break;
 	}
 	}
